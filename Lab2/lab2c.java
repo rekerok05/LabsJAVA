@@ -44,7 +44,7 @@ public class lab2c {
 
     public static void moveMatrix(int[][] matrix) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Up = 1\nLover = 2\nLeft = 3\nRight = 4\nExit = 0");
+        System.out.print("Up = 1\nLover = 2\nLeft = 3\nRight = 4\nExit = 0\nInput: ");
         int n = 0;
         do {
             n = in.nextInt();
