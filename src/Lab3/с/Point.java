@@ -1,40 +1,50 @@
 package Lab3.с;
 
 public class Point {
-    private int x, y, z;
+    private RationalFraction x, y, z;
 
     // public
     public Point() {
-        x = y = z = 0;
+
     }
 
-    public Point(int x, int y, int z) {
+    public Point(RationalFraction x, RationalFraction y, RationalFraction z) {
         this.x = x;
         this.y = y;
         this.z = z;
     }
 
-    public int getX() {
+    public Point(RationalFraction[] arrRF) {
+        this.x = arrRF[0];
+        this.y = arrRF[1];
+        this.z = arrRF[2];
+    }
+
+    public RationalFraction getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(RationalFraction x) {
         this.x = x;
     }
 
-    public int getY() {
+    public RationalFraction getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setY(RationalFraction y) {
         this.y = y;
     }
 
-    public int getZ() {
+    public RationalFraction getZ() {
         return z;
     }
 
-    public void setZ(int z) {
+    public void setZ(RationalFraction z) {
         this.z = z;
+    }
+
+    public String print() {
+        return "(" + x.print() + ", " + y.print() + ", " + z.print() + ")";
     }
 }

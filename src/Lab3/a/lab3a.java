@@ -1,6 +1,4 @@
 package Lab3.a;
-
-
 import java.util.Scanner;
 
 public class lab3a {
