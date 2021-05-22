@@ -9,6 +9,7 @@ public abstract class Auto implements Drive {
     String color;
     String countryOfRealease;
 
+
     public static void driver() {
         System.out.println("Fffff");
 

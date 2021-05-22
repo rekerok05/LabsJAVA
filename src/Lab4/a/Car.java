@@ -1,71 +1,57 @@
 package Lab4.a;
 
+import Lab4.RandomDate;
 import com.github.javafaker.Faker;
 
 import java.util.Date;
 
 public class Car extends Auto {
-    private Faker faker = new Faker();
+    private Engine engine = new Engine();
+    private Wheels wheels = new Wheels();
 
     Car() {
         name = ListCar.getRandom();
-        max_speed = faker.number().numberBetween(200, 350);
-        yearOfRelease = faker.date().between(new Date(1960, 1, 1), new Date(2021, 1, 1));
+        max_speed = RandomDate.getFaker().number().numberBetween(200, 350);
+        yearOfRelease = RandomDate.getFaker().date().between(new Date(1960, 1, 1), new Date(2021, 1, 1));
     }
 
-    @Override
-    public ListCar getName() {
-        return super.getName();
+}
+
+class Wheels {
+    private String modelWheels = RandomDate.getFaker().space().meteorite();
+    // private Boolean seasonalTtires;
+    private Status status = Status.OFF;
+
+    public String getModelWheels() {
+        return modelWheels;
     }
 
-    @Override
-    public void setName(ListCar name) {
-        super.setName(name);
+    public void setModelWheels(String modelWheels) {
+        this.modelWheels = modelWheels;
     }
 
-    @Override
-    public int getMax_speed() {
-        return super.getMax_speed();
+    public Status getStatus() {
+        return status;
     }
 
-    @Override
-    public void setMax_speed(int max_speed) {
-        super.setMax_speed(max_speed);
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+}
+
+class Engine {
+    private Status status = Status.OFF;
+
+    public Status getStatus() {
+        return status;
     }
 
-    @Override
-    public Date getYearOfRelease() {
-        return super.getYearOfRelease();
+    public void setStatus(Status status) {
+        this.status = status;
     }
+}
 
-    @Override
-    public void setYearOfRelease(Date yearOfRelease) {
-        super.setYearOfRelease(yearOfRelease);
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(String color) {
-        super.setColor(color);
-    }
-
-    @Override
-    public String getCountryOfRealease() {
-        return super.getCountryOfRealease();
-    }
-
-    @Override
-    public void setCountryOfRealease(String countryOfRealease) {
-        super.setCountryOfRealease(countryOfRealease);
-    }
-
-    @Override
-    public void printInfo() {
-        super.printInfo();
-    }
-
+enum Status {
+    ON,
+    OFF
 }
