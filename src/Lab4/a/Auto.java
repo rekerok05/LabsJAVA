@@ -1,18 +1,49 @@
 package Lab4.a;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public abstract class Auto implements Drive {
+public abstract class Auto {
     ListCar name;
     int max_speed;
-    Date yearOfRelease;
+    Date dateOfRelease;
     String color;
     String countryOfRealease;
+    int fuelTank;
+    int fuel;
 
+    public abstract void move();
 
-    public static void driver() {
-        System.out.println("Fffff");
+    public abstract void stop();
 
+    public void refuel() {
+        if (fuel < fuelTank) {
+            fuel++;
+        }
+    }
+
+    public void refuel(int count) {
+        if (this.fuel + count >= fuelTank) {
+            fuel = fuelTank;
+        } else {
+            fuel = fuel + count;
+        }
+    }
+
+    public int getFuelTank() {
+        return fuelTank;
+    }
+
+    public void setFuelTank(int fuelTank) {
+        this.fuelTank = fuelTank;
+    }
+
+    public int getFuel() {
+        return fuel;
+    }
+
+    public void setFuel(int fuel) {
+        this.fuel = fuel;
     }
 
     public ListCar getName() {
@@ -31,12 +62,12 @@ public abstract class Auto implements Drive {
         this.max_speed = max_speed;
     }
 
-    public Date getYearOfRelease() {
-        return yearOfRelease;
+    public Date getDateOfRelease() {
+        return dateOfRelease;
     }
 
-    public void setYearOfRelease(Date yearOfRelease) {
-        this.yearOfRelease = yearOfRelease;
+    public void setDateOfRelease(Date dateOfRelease) {
+        this.dateOfRelease = dateOfRelease;
     }
 
     public String getColor() {
@@ -55,7 +86,5 @@ public abstract class Auto implements Drive {
         this.countryOfRealease = countryOfRealease;
     }
 
-    public void printInfo() {
-        System.out.println("Car " + name + "have max speed " + max_speed);
-    }
+    public abstract void printInfo();
 }

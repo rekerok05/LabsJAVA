@@ -5,7 +5,7 @@ package Lab4.a;
 public class lab4a {
     public static void main(String[] args) {
         Car car = new Car();
-        System.out.println("год" + car.getYearOfRelease().getYear());
+        car.printInfo();
     }
 
 
