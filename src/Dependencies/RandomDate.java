@@ -1,4 +1,4 @@
-package Lab4;
+package Dependencies;
 
 import com.github.javafaker.Faker;
 

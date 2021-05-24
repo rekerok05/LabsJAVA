@@ -1,15 +1,15 @@
 package Lab4.a;
 
-import Lab4.RandomDate;
+import Dependencies.RandomDate;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Car extends Auto {
-    private Engine engine = new Engine();
-    private Wheels wheels = new Wheels();
+    public Engine engine = new Engine();
+    public Wheels wheels = new Wheels();
 
-    Car() {
+    public Car() {
         name = ListCar.getRandom();
         max_speed = RandomDate.getFaker().number().numberBetween(200, 350);
         dateOfRelease = RandomDate.getFaker().date().between(new Date(60, 1, 1), new Date(121, 1, 1));
@@ -20,7 +20,7 @@ public class Car extends Auto {
         engine.setStatus(Status.ON);
     }
 
-    Car(ListCar name, int max_speed, Date yearOfRelease, String color, String countryOfRealease, int fuelTank, int fuel) {
+    public Car(ListCar name, int max_speed, Date yearOfRelease, String color, String countryOfRealease, int fuelTank, int fuel) {
         this.name = name;
         this.max_speed = max_speed;
         this.dateOfRelease = yearOfRelease;
@@ -69,6 +69,12 @@ public class Car extends Auto {
     public void changeWheels(String modelWheels) {
         wheels.setModelWheels(modelWheels);
     }
+
+    public String getModelWheels(){
+        return wheels.getModelWheels();
+    }
+
+
 
 }
 
