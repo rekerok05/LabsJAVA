@@ -1,6 +1,6 @@
 package Dependencies;
 
-import Lab4.a.Car;
+import Lab4.a.*;
 import Lab4.a.ListCar;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -26,12 +26,14 @@ public class TestNG {
     @Test
     public void refuel() throws Exception {
         int countRefuel = 15;
+        car.refuel(countRefuel);
         Assert.assertEquals(21, car.getFuel());
     }
 
     @Test
     public void changeWheels() throws Exception {
         String tmpModelWheels = "MD-3310";
-        Assert.assertEquals(car.wheels.);
+        car.wheels.setModelWheels(tmpModelWheels);
+        Assert.assertEquals(tmpModelWheels, car.wheels.getModelWheels());
     }
 }

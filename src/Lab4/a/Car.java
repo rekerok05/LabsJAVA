@@ -61,67 +61,8 @@ public class Car extends Auto {
         System.out.println("Model wheels " + wheels.getModelWheels());
         System.out.println("Model engine " + engine.getModelEngine());
     }
-
-    public void changeWheels() {
-        wheels.setModelWheels(RandomDate.getFaker().space().meteorite());
-    }
-
-    public void changeWheels(String modelWheels) {
-        wheels.setModelWheels(modelWheels);
-    }
-
-    public String getModelWheels(){
-        return wheels.getModelWheels();
-    }
-
-
-
 }
 
-class Wheels {
-    private String modelWheels = RandomDate.getFaker().space().meteorite();
-    // private Boolean seasonalTtires;
-    private Status status = Status.OFF;
-
-    public String getModelWheels() {
-        return modelWheels;
-    }
-
-    public void setModelWheels(String modelWheels) {
-        this.modelWheels = modelWheels;
-    }
-
-    public Status getStatus() {
-        return status;
-    }
-
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-
-
-}
-
-class Engine {
-    private String modelEngine = RandomDate.getFaker().space().star();
-    private Status status = Status.OFF;
-
-    public String getModelEngine() {
-        return modelEngine;
-    }
-
-    public void setModelEngine(String modelEngine) {
-        this.modelEngine = modelEngine;
-    }
-
-    public Status getStatus() {
-        return status;
-    }
-
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-}
 
 enum Status {
     ON,
