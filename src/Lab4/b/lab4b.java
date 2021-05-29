@@ -5,7 +5,11 @@ import Lab4.b.TypeCandies.Chocolate;
 
 public class lab4b {
     public static void main(String[] args) {
-        Candy choco = new Chocolate();
-        choco.printInfo();
+        Gift gift = new Gift(10);
+        gift.printInfo();
+        gift.sortByWeight();
+        System.out.println();
+        gift.printInfo();
+        System.out.println("Weight gift = "+gift.getWeightGift());
     }
 }

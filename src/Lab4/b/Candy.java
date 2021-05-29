@@ -5,12 +5,14 @@ public abstract class Candy {
     private double sugar;
     private String country;
 
+
     public double getWeight() {
         return this.weight;
     }
 
     public void setWeight(double weight) {
         this.weight = weight;
+        this.sugar = this.weight / 10;
     }
 
     public double getSugar() {
@@ -19,6 +21,7 @@ public abstract class Candy {
 
     public void setSugar(double sugar) {
         this.sugar = sugar;
+        this.weight = this.sugar * 10;
     }
 
     public String getCountry() {
@@ -29,11 +32,7 @@ public abstract class Candy {
         this.country = country;
     }
 
-    public void printInfo() {
-        System.out.println("weight = " + this.weight);
-        System.out.printf("sugar = %.2f\n", this.sugar);
-        System.out.println("country = " + this.country);
-    }
+    public abstract void printInfo();
 }
 
 
