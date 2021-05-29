@@ -108,6 +108,7 @@ public class Customer {
     }
 
     public void SetAllInfo() {
+        lab3a.Example.in.nextLine();
         System.out.print("New name: ");
         this.name = lab3a.Example.in.nextLine();
         System.out.print("New surname: ");

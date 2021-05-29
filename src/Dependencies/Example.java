@@ -1,7 +1,7 @@
-package Lab3.a;
+package Dependencies;
 
 import java.util.Scanner;
 
-class Example {
+public class Example {
     public static Scanner in = new Scanner(System.in);
 }

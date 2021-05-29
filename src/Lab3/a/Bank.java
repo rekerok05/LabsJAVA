@@ -1,5 +1,7 @@
 package Lab3.a;
 
+import Dependencies.Example;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
