@@ -1,0 +1,28 @@
+package Lab6.c;
+
+public class Example {
+    private int tmp1 = 10;
+    private int tmp2 = 34534;
+
+    private Example(int tmp1, int tmp2) {
+        this.tmp1 = tmp1;
+        this.tmp2 = tmp2;
+    }
+
+    private int getTmp1() {
+        return tmp1;
+    }
+
+    private void setTmp1(int tmp1) {
+        this.tmp1 = tmp1;
+    }
+
+    private int getTmp2() {
+        return tmp2;
+    }
+
+    private void setTmp2(int tmp2) {
+        this.tmp2 = tmp2;
+    }
+}
+

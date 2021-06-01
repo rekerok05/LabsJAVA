@@ -2,10 +2,7 @@ package Lab6.a;
 
 import Dependencies.Example;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Scanner;
@@ -19,6 +16,9 @@ public class lab6a {
         System.out.println(fileContent);
         fileContent = replace(fileContent);
         System.out.println(fileContent);
+        PrintWriter writer = new PrintWriter(path, "UTF-8");
+        writer.println(fileContent);
+        writer.close();
     }
 
     public static String replace(String str) {
